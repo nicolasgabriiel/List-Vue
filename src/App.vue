@@ -16,4 +16,8 @@ export default defineComponent({
 
 <style>
 @import url(./assets/css/reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+#app{
+  font-family: 'Kaushan Script', cursive;
+}
 </style>

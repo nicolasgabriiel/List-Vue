@@ -1,5 +1,6 @@
 <template>
-    <input type="text"/>
+    <input type="text" placeholder="
+enter your task here"/>
     <button>Adicionar</button>
 </template>
 
@@ -14,6 +15,6 @@ export default defineComponent({
 
 </script>
 
-<style>
+<style scoped>
 
 </style>

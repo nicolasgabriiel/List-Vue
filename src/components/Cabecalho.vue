@@ -20,5 +20,9 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
+h1{
+  text-align: center;
+  margin: 50px 0 30px 0;
+  font-size: 50px;
+}
 </style>

@@ -1,7 +1,16 @@
 <template>
     <section class="section-gerenciamento">   
-        <input type="text" placeholder="enter your task here" @input="escrevendo"/>
-        <button :disabled="!inputTask" v-bind:class="{'ativado': ativando}" @click="adicionarTasks">Add</button>
+        <input 
+            type="text" 
+            placeholder="enter your task here" 
+            @input="escrevendo"
+            v-model="descricao"
+        />
+        <button 
+            :disabled="!inputTask" 
+            v-bind:class="{'ativado': ativando}"
+            @click="adicionarTasks">Add
+        </button>
     </section> 
 </template>
 
@@ -13,7 +22,12 @@ export default defineComponent({
     data (){
         return{
             inputTask: false,
-            ativando: false
+            ativando: false,
+            descricao: '',
+            listaDeTarefas: [],
+            descricaoteste: '',
+            listaDeTarefasNovas:''
+
         }
     },
     methods:{
@@ -21,13 +35,32 @@ export default defineComponent({
             this.inputTask = true
             this.ativando = true
         },
-        adicionarTasks (){
-            console.log('adicionando tasks')
+        adicionarTasks(descricao) {
+            console.log('adicionando task ' + this.descricao)
+            this.listaDeTarefas.push(descricao)
+            console.log(this.listaDeTarefas)
         }
-    }
-
+    },
+    // computed: {
+    //     VerificaInput(): void {
+    //         if('aa'){}
+    //     }
+    // }
 })
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <style scoped>
 .section-gerenciamento{
@@ -36,7 +69,7 @@ export default defineComponent({
 }
 input{
     padding: 10px 20px;
-    width: 15%;
+    width: 300px;
     border-radius: 10px;
     font-size: 20px;
     background-color: white;

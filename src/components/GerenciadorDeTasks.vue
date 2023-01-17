@@ -26,7 +26,9 @@ export default defineComponent({
             descricao: '',
             listaDeTarefas: [],
             descricaoteste: '',
-            listaDeTarefasNovas:''
+            listaDeTarefasNovas:'',
+            tarefas: [] as ITarefa[]
+        
 
         }
     },
@@ -35,10 +37,8 @@ export default defineComponent({
             this.inputTask = true
             this.ativando = true
         },
-        adicionarTasks(descricao) {
-            console.log('adicionando task ' + this.descricao)
-            this.listaDeTarefas.push(descricao)
-            console.log(this.listaDeTarefas)
+        adicionarTasks() {
+
         }
     },
     // computed: {

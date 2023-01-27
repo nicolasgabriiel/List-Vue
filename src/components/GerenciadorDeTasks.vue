@@ -9,13 +9,16 @@
         <button 
             :disabled="!inputTask" 
             v-bind:class="{'ativado': ativando}"
-            @click="adicionarTasks">Add
+            @click="adicionarTasks">
+            Add
         </button>
     </section> 
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+
+import ITarefa from './interfaces/ITarefa';
 
 export default defineComponent({
     name: 'GerenciadorDeTasks',
@@ -37,30 +40,10 @@ export default defineComponent({
             this.inputTask = true
             this.ativando = true
         },
-        adicionarTasks() {
-
-        }
+        
     },
-    // computed: {
-    //     VerificaInput(): void {
-    //         if('aa'){}
-    //     }
-    // }
 })
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <style scoped>
 .section-gerenciamento{

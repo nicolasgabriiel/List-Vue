@@ -27,9 +27,6 @@ export default defineComponent({
             inputTask: false,
             ativando: false,
             descricao: '',
-            listaDeTarefas: [],
-            descricaoteste: '',
-            listaDeTarefasNovas:'',
             tarefas: [] as ITarefa[]
         
 
@@ -40,7 +37,10 @@ export default defineComponent({
             this.inputTask = true
             this.ativando = true
         },
-        
+        adicionarTasks (){
+            console.log(this.descricao)
+            this.descricao = ''
+        }
     },
 })
 </script>

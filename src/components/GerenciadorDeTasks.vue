@@ -8,7 +8,7 @@
         />
         <button 
             :disabled="!inputTask" 
-            v-bind:class="{'ativado': ativando}"
+            v-bind:class="{'ativado': estilo}"
             @click="adicionarTasks">
             Add
         </button>
@@ -18,30 +18,32 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import ITarefa from './interfaces/ITarefa';
+
 
 export default defineComponent({
     name: 'GerenciadorDeTasks',
     data (){
         return{
             inputTask: false,
-            ativando: false,
+            estilo: false,
             descricao: '',
-            tarefas: [] as ITarefa[]
-        
-
-        }
-    },
+            }  
+        },
     methods:{
         escrevendo () {
             this.inputTask = true
-            this.ativando = true
+            this.estilo = true
+
         },
         adicionarTasks (){
-            console.log(this.descricao)
+            this.inputTask = false
+            this.estilo = false
+            this.$emit('aoSalvarTarefa', { descricao: this.descricao })
             this.descricao = ''
         }
     },
+    emits:['aoSalvarTarefa']
+
 })
 </script>
 

@@ -5,11 +5,14 @@
             placeholder="enter your task here" 
             @input="escrevendo"
             v-model="descricao"
+            @keydown.enter="adicionarTasks"
         />
         <button 
             :disabled="!inputTask" 
             v-bind:class="{'ativado': estilo}"
-            @click="adicionarTasks">
+            @click="adicionarTasks"
+            >
+            
             Add
         </button>
     </section> 

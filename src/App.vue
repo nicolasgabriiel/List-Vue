@@ -1,5 +1,5 @@
 <template>
- <header>
+ <header class="bg-blue-500">
     <h1>My To-Do List</h1>
     <GerenciadorDeTasks @aoSalvarTarefa="salvarTarefa"/>
     <Tarefas v-for="(tarefa, indice ) in tarefas" :key="indice" :tarefa="tarefa" />
@@ -33,17 +33,5 @@ export default defineComponent({
 </script>
 
 <style>
-@import url(./assets/css/reset.css);
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-#app{
-  font-family: 'Kaushan Script', cursive;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%); 
-}
-h1{
-  text-align: center;
-  padding: 50px 0 ;
-  font-size: 50px;
-}
+
 </style>

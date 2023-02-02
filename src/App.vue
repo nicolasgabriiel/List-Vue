@@ -1,5 +1,5 @@
 <template>
- <header class="bg-blue-500">
+ <header class="bg-blue-900">
     <h1>My To-Do List</h1>
     <GerenciadorDeTasks @aoSalvarTarefa="salvarTarefa"/>
     <Tarefas v-for="(tarefa, indice ) in tarefas" :key="indice" :tarefa="tarefa" />

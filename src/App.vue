@@ -1,9 +1,11 @@
 <template>
- <header class="bg-blue-800 w-3/5 flex-col  justify-end">
-    <h1>My To-Do List</h1>
-    <GerenciadorDeTasks @aoSalvarTarefa="salvarTarefa"/>
-    <Tarefas v-for="(tarefa, indice ) in tarefas" :key="indice" :tarefa="tarefa" />
-  </header>
+  <div class="flex  justify-center">
+    <div class="bg-blue-800 w-3/5">
+      <h1>My To-Do List</h1>
+      <GerenciadorDeTasks @aoSalvarTarefa="salvarTarefa" />
+      <Tarefas v-for="(tarefa, indice ) in tarefas" :key="indice" :tarefa="tarefa" />
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -18,13 +20,13 @@ export default defineComponent({
     GerenciadorDeTasks,
     Tarefas
   },
-  data(){
-    return{
+  data() {
+    return {
       tarefas: [] as ITarefa[]
     }
   },
-  methods:{
-    salvarTarefa (tarefa: ITarefa){
+  methods: {
+    salvarTarefa(tarefa: ITarefa) {
       this.tarefas.push(tarefa)
       console.log(this.tarefas[0])
     }

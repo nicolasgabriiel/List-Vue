@@ -5,7 +5,7 @@
                     src="../assets/verificar.png" alt="Concluído" v-bind:class="{ 'hide': !concluido }"></div>
             <p class="text-1xl " v-bind:class="{ 'line-through': concluido }"> - {{ tarefa.descricao }} </p>
         </div>
-        <button @click="deixarinvisivel"><img src="../assets/lixo.png" alt="remover" class="w-5"></button>
+        <button @click="deixarinvisivel"><img src="../assets/lixo.png" alt="remover" class="w-5 ml-2"></button>
     </div>
 
 </template>

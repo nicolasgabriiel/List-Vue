@@ -30,7 +30,7 @@ Foi a minha primeira vez desenvolvendo uma To-Do List, foi uma experiência pra 
 
 
 
-### Link: https://card-compenent.vercel.app
+### Link: https://list-vue-6aqf.vercel.app
 
 ## Processo
 
@@ -38,60 +38,60 @@ Foi a minha primeira vez desenvolvendo uma To-Do List, foi uma experiência pra 
 
 -Vue.JS <br>
 -TypeScript <br>
+-TailWind <br>
 -HTML5 <br>
 -CSS3 <br>
 -JavaScript <br>
 
 ### Principais coisas que aprendi
 
-Enviar dados para um componente filho
+Criar interface com TS
 
 ```js
-   <CardConcluido :valor-esperado='valor' />
+export default interface ITarefa {
+    descricao: string
+}
 ```
 
-Receber dados de um elemento pai através de propriedades
+Receber uma interface pelo vue
 
 ```js
-    props: {
-        valorEsperado: {
-            type: Number,
-            default: 0,
-        }
-```
-
-Criar dados que funcionam como variáveis
-
-```js
-  data(){
-    return{
-      hide: false,
-      valor: 0
+    data() {
+    return {
+      tarefas: [] as ITarefa[]
     }
 ```
 
-Utilizando métodos
+Instalar o Tailwind
+
 ```js
-methods:{
-    Funcao(){
-      this.hide = true
+ /** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [".index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+```
+
+Importando fonte pelo TailWind
+```js
+    extend: {
+      fontFamily: {
+        'alfa': ['Alfa Slab One', 'cursive']
+      }
     }
 ```
-Enviando dados para o componente pai com o Emit
+Utilizando dados na tela
 ```js
-this.$emit('hide')
+{{ tarefa.descricao }}
 ```
-
-Recebendo dados emitidos do componente filho
+Utilizando v-bind
 ```js
-     <Card v-on:hide="Funcao"/>
+v-bind:class="{ 'hide': !concluido }"
 ```
-
-Passando um dado dentro de um emmit 
-```js
- this.$emit('valor', { meuValor: this.escolhido } )
-```
-
 
 ## Autor
 

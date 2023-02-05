@@ -1,7 +1,7 @@
 <template>
-  <div class="w-5/5 flex  justify-center">
-    <div class="flex flex-col justify-center">
-      <h1 class="text-center m-6 bg-blue-800 w-5/5" >My To-Do List</h1>
+  <div class="flex  justify-center bg-black min-h-screen font-alfa">
+    <div class="flex flex-col ">
+      <h1 class="text-center  m-6 text-3xl px-20 py-4 rounded-2xl font-alfa font-normal text-rose-500 border-rose-500 border-2 hover:scale-105 duration-1000 hover:cursor-default "  >My To-Do List</h1>
       <GerenciadorDeTasks @aoSalvarTarefa="salvarTarefa" />
       <Tarefas v-for="(tarefa, indice ) in tarefas" :key="indice" :tarefa="tarefa" />
     </div>

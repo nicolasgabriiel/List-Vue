@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "Icones";
+    src: url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap') format("ttf");
+}

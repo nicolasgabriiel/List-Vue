@@ -1,3 +1,3 @@
 export default interface ITarefa {
-    descricaoDaTarefa: string
+    descricao: string
 }
